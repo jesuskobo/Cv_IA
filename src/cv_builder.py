@@ -1,5 +1,6 @@
 import copy
 
+from src.debug_utils import debug, info
 from src.responsibility_filter import ResponsibilityFilter
 from src.responsibility_ranker import ResponsibilityRanker
 from src.summary_builder import SummaryBuilder
@@ -22,6 +23,8 @@ class CVBuilder:
         self.subtitle_builder = SubtitleBuilder()
 
     def construir(self, skills_oferta, cv_maestro, experiencias):
+        info("Iniciando construcción del CV personalizado")
+        debug(f"Skills de oferta recibidas: {skills_oferta}")
 
         # ==========================================
         # Copiar CV Maestro
@@ -40,6 +43,7 @@ class CVBuilder:
         # ==========================================
 
         for trabajo in cv["experiencia"]:
+            debug(f"Procesando experiencia: {trabajo.get('empresa', 'Sin empresa')}")
 
             # ======================================
             # Responsabilidades
@@ -161,6 +165,7 @@ class CVBuilder:
             )
         )
 
+        info("Construcción del CV finalizada")
         return cv
 
     def filtrar_competencias(self, competencias, skills_oferta):

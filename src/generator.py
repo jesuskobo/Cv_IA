@@ -1,4 +1,6 @@
 import os
+from src.debug_utils import debug, info, project_path
+
 
 class GeneradorCV:
 
@@ -32,13 +34,13 @@ class GeneradorCV:
             texto += "-" * 50
             texto += "\n\n"
 
-        os.makedirs("salida", exist_ok=True)
+        salida_dir = project_path("salida")
+        os.makedirs(salida_dir, exist_ok=True)
 
-        with open(
-            "salida/CV_Generado.txt",
-            "w",
-            encoding="utf8"
-        ) as f:
+        salida_path = salida_dir / "CV_Generado.txt"
+        debug(f"Guardando vista previa en: {salida_path}")
+
+        with open(salida_path, "w", encoding="utf8") as f:
             f.write(texto)
 
         return texto

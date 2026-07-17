@@ -2,18 +2,23 @@ import json
 from copy import deepcopy
 
 from src.aliases import Aliases
+from src.debug_utils import debug, info, warning
 
 
 class Selector:
 
     def __init__(self):
+        from src.debug_utils import project_path
 
-        with open("data/cv_maestro.json", "r", encoding="utf8") as f:
+        cv_path = project_path("data", "cv_maestro.json")
+        debug(f"Cargando CV maestro en Selector desde: {cv_path}")
+        with open(cv_path, "r", encoding="utf8") as f:
             self.db = json.load(f)
 
         self.aliases = Aliases()
 
     def buscar(self, keywords):
+        info(f"Buscando experiencias para las keywords: {keywords}")
 
         experiencias = []
 
@@ -49,6 +54,7 @@ class Selector:
                         skills_relevantes.add(skill)
 
             if score > 0:
+                debug(f"Experiencia relevante encontrada: {trabajo['empresa']} | score={score}")
 
                 copia = deepcopy(trabajo)
 
@@ -57,4 +63,5 @@ class Selector:
 
                 experiencias.append(copia)
 
+        info(f"Experiencias seleccionadas: {len(experiencias)}")
         return experiencias

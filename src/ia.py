@@ -1,5 +1,10 @@
-from ollama import chat
+from src.debug_utils import debug, error, warning
 from src.prompt_builder import PromptBuilder
+
+try:
+    from ollama import chat
+except ImportError:
+    chat = None
 
 
 class IA:
@@ -34,13 +39,19 @@ class IA:
         return texto.strip()
 
     def preguntar(self, prompt):
+        debug("Iniciando llamada a la IA para mejorar el texto")
 
-        respuesta = chat(
-            model="llama3.1:8b",
-            messages=[
-                {
-                    "role": "system",
-                    "content": """
+        if chat is None:
+            warning("Ollama no está disponible; se devolverá el texto original")
+            return prompt
+
+        try:
+            respuesta = chat(
+                model="llama3.1:8b",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": """
 Eres un editor profesional de currículums.
 
 Tu única tarea es mejorar la redacción.
@@ -94,17 +105,22 @@ Responsable de...
                     "role": "user",
                     "content": prompt
                 }
-            ],
-            options={
-                "temperature": 0,
-                "top_p": 0.1,
-                "num_predict": 120
-            }
-        )
+                ],
+                options={
+                    "temperature": 0,
+                    "top_p": 0.1,
+                    "num_predict": 120
+                }
+            )
 
-        return self.limpiar(
-            respuesta.message.content
-        )
+            debug("Respuesta recibida desde Ollama")
+            return self.limpiar(
+                respuesta.message.content
+            )
+        except Exception as exc:
+            error(f"Error al consultar Ollama: {exc}")
+            warning("Se devolverá el texto original porque la IA falló")
+            return prompt
 
     def mejorar_resumen(self, resumen, oferta):
 

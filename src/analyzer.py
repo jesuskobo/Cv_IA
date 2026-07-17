@@ -1,4 +1,5 @@
 import re
+from src.debug_utils import debug, info, warning
 
 # Tecnologías conocidas
 SKILLS = [
@@ -94,13 +95,16 @@ def leer_oferta(ruta):
 
 
 def extraer_skills(texto):
+    info("Extrayendo skills desde el texto de la oferta")
+    debug(f"Texto de entrada recibido: {texto[:120]}...")
 
     texto = texto.lower()
-
     encontradas = []
 
     for skill in SKILLS:
         if re.search(rf"\b{re.escape(skill)}\b", texto):
             encontradas.append(skill)
 
-    return sorted(list(set(encontradas)))
+    resultado = sorted(list(set(encontradas)))
+    info(f"Skills encontradas: {resultado}")
+    return resultado

@@ -1,133 +1,94 @@
 import json
 
-from rich import print
-
 from src.analyzer import leer_oferta, extraer_skills
-from src.selector import Selector
-from src.cv_builder import CVBuilder
-from src.generator import GeneradorCV
-from src.export_docx import ExportadorDOCX
 from src.ats_score import ATSScore
-from src.ia import IA
-from src.cv_updater import CVUpdater
+from src.cv_builder import CVBuilder
+from src.debug_utils import debug, error, info, project_path
+from src.export_docx import ExportadorDOCX
+from src.generator import GeneradorCV
+from src.selector import Selector
 
 
-# ===========================
-# Leer oferta
-# ===========================
+def main():
+    info("Inicio del proceso de generación del CV")
 
-texto = leer_oferta("ofertas/oferta.txt")
+    try:
+        oferta_path = project_path("ofertas", "oferta.txt")
+        debug(f"Leyendo oferta desde: {oferta_path}")
+        texto = leer_oferta(str(oferta_path))
 
-skills = extraer_skills(texto)
+        skills = extraer_skills(texto)
+        info(f"Skills detectadas: {skills}")
+        print("\nTecnologías encontradas")
+        for s in skills:
+            print(f"✔ {s}")
 
-print("\n[bold green]Tecnologías encontradas[/bold green]")
+        cv_path = project_path("data", "cv_maestro.json")
+        debug(f"Cargando CV maestro desde: {cv_path}")
+        with open(cv_path, "r", encoding="utf-8") as f:
+            cv_maestro = json.load(f)
 
-for s in skills:
-    print(f"✔ {s}")
+        selector = Selector()
+        experiencias = selector.buscar(skills)
+        info(f"Experiencias encontradas: {len(experiencias)}")
 
+        print("\nExperiencias encontradas")
+        for trabajo in experiencias:
+            print(f"\nEmpresa: {trabajo['empresa']}")
+            print(f"Cargo: {trabajo['cargo']}")
+            print(f"Score: {trabajo['score']}")
 
-# ===========================
-# Cargar CV Maestro
-# ===========================
+        builder = CVBuilder()
+        cv = builder.construir(skills, cv_maestro, experiencias)
+        info("CV personalizado construido")
 
-with open("data/cv_maestro.json", "r", encoding="utf8") as f:
-    cv_maestro = json.load(f)
+        ats = ATSScore()
+        resultado = ats.calcular(skills, experiencias)
+        info(f"ATS calculado: {resultado['porcentaje']}%")
 
+        generador = GeneradorCV()
+        texto_cv = generador.generar(cv)
+        info("Vista previa generada")
 
-# ===========================
-# Buscar experiencias relevantes
-# ===========================
+        print("\nCV Generado\n")
+        print(texto_cv)
 
-selector = Selector()
+        exportador = ExportadorDOCX()
+        exportador.exportar(cv)
+        info("Documento DOCX exportado")
 
-experiencias = selector.buscar(skills)
+        print("\n" + "=" * 50)
+        print("ATS SCORE")
+        print("=" * 50)
+        print(f"Compatibilidad: {resultado['porcentaje']} %")
+        print()
+        print(f"Peso obtenido : {resultado['peso_encontrado']}")
+        print(f"Peso total    : {resultado['peso_total']}")
+        print()
 
-print("\n[bold cyan]Experiencias encontradas[/bold cyan]")
+        if resultado["faltantes"]:
+            print("Skills faltantes:")
+            for skill in resultado["faltantes"]:
+                print(f"   - {skill}")
+        else:
+            print("No faltan skills.")
 
-for trabajo in experiencias:
-    print(f"\nEmpresa: {trabajo['empresa']}")
-    print(f"Cargo: {trabajo['cargo']}")
-    print(f"Score: {trabajo['score']}")
+        print("\n" + "=" * 60)
+        print("RESUMEN GENERADO")
+        print("=" * 60)
+        print(cv["resumen"])
+        print("=" * 60)
 
-
-# ===========================
-# Construir CV personalizado
-# ===========================
-
-builder = CVBuilder()
-
-cv = builder.construir(
-    skills,
-    cv_maestro,
-    experiencias
-)
-
-
-# ===========================
-# Calcular ATS
-# ===========================
-
-ats = ATSScore()
-
-resultado = ats.calcular(
-    skills,
-    experiencias
-)
-
-
-
-
-# ===========================
-# Vista previa en consola
-# ===========================
-
-generador = GeneradorCV()
-
-texto_cv = generador.generar(cv)
-
-print("\n[bold magenta]CV Generado[/bold magenta]\n")
-
-print(texto_cv)
-
-
-# ===========================
-# Exportar DOCX
-# ===========================
-
-exportador = ExportadorDOCX()
-
-exportador.exportar(cv)
+    except FileNotFoundError as exc:
+        error(f"Archivo no encontrado: {exc}")
+        print(f"Error: no se encontró el archivo: {exc}")
+    except json.JSONDecodeError as exc:
+        error(f"Error al leer JSON: {exc}")
+        print(f"Error: el JSON está mal formado: {exc}")
+    except Exception as exc:
+        error(f"Error inesperado: {exc}")
+        print(f"Error: {exc}")
 
 
-# ===========================
-# Mostrar ATS
-# ===========================
-
-print("\n" + "=" * 50)
-print("ATS SCORE")
-print("=" * 50)
-
-print(f"Compatibilidad: {resultado['porcentaje']} %")
-print()
-
-print(f"Peso obtenido : {resultado['peso_encontrado']}")
-print(f"Peso total    : {resultado['peso_total']}")
-
-print()
-
-if resultado["faltantes"]:
-
-    print("Skills faltantes:")
-
-    for skill in resultado["faltantes"]:
-        print(f"   - {skill}")
-
-else:
-
-    print("No faltan skills.")
-
-print("\n" + "=" * 60)
-print("RESUMEN GENERADO")
-print("=" * 60)
-print(cv["resumen"])
-print("=" * 60)
+if __name__ == "__main__":
+    main()

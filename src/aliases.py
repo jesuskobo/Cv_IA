@@ -1,11 +1,15 @@
 import json
+from src.debug_utils import debug, info
 
 
 class Aliases:
 
     def __init__(self):
+        from src.debug_utils import project_path
 
-        with open("data/aliases.json", "r", encoding="utf8") as f:
+        aliases_path = project_path("data", "aliases.json")
+        debug(f"Cargando aliases desde: {aliases_path}")
+        with open(aliases_path, "r", encoding="utf8") as f:
             self.aliases = json.load(f)
 
     def coincide(self, skill, skills_oferta):
