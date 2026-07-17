@@ -1,0 +1,23 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Directorios de salida y logs (No queremos subir los resultados generados)
+/salida/
+/logs/
+
+# Entornos virtuales (Si usas uno, esto es obligatorio)
+venv/
+.env
+
+# Archivos de sistema / IDEs
+.DS_Store
+.vscode/
+.idea/
+
+# Documentos sensibles o temporales
+*.log
+*.sqlite
+*.db

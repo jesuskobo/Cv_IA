@@ -2,7 +2,7 @@
 # Genera un archivo DOCX a partir del CV estructurado usando una plantilla.
 
 import os
-
+import subprocess
 from src.debug_utils import debug, error, info, project_path
 
 try:
@@ -67,5 +67,21 @@ class ExportadorDOCX:
         ruta = salida_dir / nombre_archivo
         debug(f"Guardando documento DOCX en: {ruta}")
         doc.save(str(ruta))
+
+        # Llamada adicional manteniendo la estructura y nombres originales
+        self._convertir_a_pdf(ruta, salida_dir)
+
         info(f"Documento generado: {ruta}")
         print(f"Documento generado: {ruta}")
+
+    def _convertir_a_pdf(self, ruta_docx, salida_dir):
+        # Implementación sin cambiar nada externo
+        try:
+            cmd = [
+                "soffice", "--headless", "--convert-to", "pdf", 
+                str(ruta_docx), "--outdir", str(salida_dir)
+            ]
+            subprocess.run(cmd, check=True, capture_output=True)
+            info("Conversión a PDF exitosa")
+        except Exception as e:
+            error(f"No se pudo convertir a PDF: {e}")
