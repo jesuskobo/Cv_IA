@@ -4,18 +4,32 @@ Ingeniero de Infraestructura Linux
 EXPERIENCIA
 ========================================
 
+Ingeniero de Infraestructura linux y Automatización
+XOLIT
+2026 - Actualidad
+
+Tecnologías relevantes:
+ - linux
+
+Logros:
+ • Participé en iniciativas de mejora continua orientadas a la administración de infraestructura Linux.
+ • Implementé actividades de hardening para fortalecer la seguridad de servidores Linux.
+ • Ejecuté expansiones de almacenamiento mediante LVM sin afectar la disponibilidad de los servicios.
+
+--------------------------------------------------
+
 Ingeniero de Infraestructura
 KFC Colombia
 2020 - 2026
 
 Tecnologías relevantes:
- - Linux
- - Windows Server
- - Azure
- - Azure SQL
+ - azure
+ - azure sql
+ - linux
+ - windows server
 
 Logros:
- • Me encargué de administrar la infraestructura en más de 300 sedes.
+ • Administré entornos Azure, Azure SQL y PostgreSQL para apoyar la operación de aplicaciones críticas.
 
 --------------------------------------------------
 
@@ -24,11 +38,13 @@ ARUS
 2019 - 2020
 
 Tecnologías relevantes:
- - Linux
- - Windows Server
+ - linux
+ - windows
+ - windows server
 
 Logros:
- • Me especialicé en proyectos de modernización tecnológica.
+ • Brindé soporte técnico a plataformas Windows, Linux, servidores y redes corporativas.
+ • Configuré equipos corporativos para su integración al dominio e infraestructura empresarial.
 
 --------------------------------------------------
 
@@ -37,23 +53,12 @@ COS
 2018 - 2019
 
 Tecnologías relevantes:
- - Linux
- - Windows Server
+ - linux
+ - red hat
+ - windows server
 
 Logros:
- • Desarrollé y apoyé el despliegue de infraestructura física.
-
---------------------------------------------------
-
-Ingeniero de Infraestructura Linux y Automatización
-XOLIT
-2026 - 2026
-
-Tecnologías relevantes:
- - Linux
-
-Logros:
- • Me especialicé en seguridad informática.
+ • Configuré servidores Linux Red Hat y Windows Server para diversos entornos empresariales.
 
 --------------------------------------------------
 

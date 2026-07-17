@@ -16,6 +16,32 @@ class ATSScore:
 
         faltantes = []
 
+        # ==========================
+        # Obtener todas las skills del CV
+        # ==========================
+
+        skills_cv = set()
+
+        for trabajo in experiencias:
+
+            # Responsabilidades
+            for responsabilidad in trabajo["responsabilidades"]:
+
+                for skill in responsabilidad["skills"]:
+
+                    skills_cv.add(skill)
+
+            # Logros
+            for logro in trabajo["logros"]:
+
+                for skill in logro["skills"]:
+
+                    skills_cv.add(skill)
+
+        # ==========================
+        # Calcular ATS
+        # ==========================
+
         for skill in skills_oferta:
 
             peso = self.ranker.peso(skill)
@@ -24,16 +50,11 @@ class ATSScore:
 
             encontrado = False
 
-            for trabajo in experiencias:
+            for skill_cv in skills_cv:
 
-                for s in trabajo["skills"]:
+                if self.aliases.coincide(skill_cv, [skill]):
 
-                    if self.aliases.coincide(s, [skill]):
-
-                        encontrado = True
-                        break
-
-                if encontrado:
+                    encontrado = True
                     break
 
             if encontrado:
@@ -55,11 +76,8 @@ class ATSScore:
         return {
 
             "porcentaje": porcentaje,
-
             "peso_total": peso_total,
-
             "peso_encontrado": peso_encontrado,
-
             "faltantes": faltantes
 
         }

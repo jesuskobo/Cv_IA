@@ -3,35 +3,21 @@ class PromptBuilder:
     def prompt_resumen(self, resumen, oferta):
 
         return f"""
-Eres un Recruiter Senior.
+Reescribe este resumen profesional para un CV.
 
-Reescribe únicamente este resumen profesional.
-
-Puedes reorganizar el texto únicamente para resaltar información que YA EXISTE.
-
-Palabras clave de la oferta:
-
-{oferta}
-
-REGLAS
+REGLAS:
 
 - No inventes información.
 - No agregues tecnologías.
 - No agregues experiencia.
 - No agregues certificaciones.
 - No cambies el significado.
-- Conserva únicamente la información existente.
-- No agregues palabras clave que no existan.
-- Escribe en estilo profesional de CV.
-- Comienza directamente con la profesión o cargo.
-- No escribas en primera persona.
-- No uses frases como:
-    - He...
-    - Mi...
-    - Como Ingeniero...
 - Máximo 70 palabras.
+- Devuelve únicamente el resumen.
 
-Devuelve únicamente el resumen.
+Oferta:
+
+{oferta}
 
 Resumen:
 
@@ -41,30 +27,18 @@ Resumen:
     def prompt_responsabilidad(self, texto):
 
         return f"""
-Reescribe únicamente esta responsabilidad.
+Reescribe esta responsabilidad para un CV profesional.
 
-REGLAS
+REGLAS:
 
 - No inventes información.
 - No agregues tecnologías.
-- No elimines tecnologías.
-- No cambies el significado.
-- Solo mejora gramática y redacción.
-- Mantén una longitud similar.
-- Máximo 100 palabras.
-- Debe comenzar con un verbo en primera persona del pasado.
-- Nunca uses tercera persona.
-
-Ejemplos correctos:
-
-Administré...
-Implementé...
-Configuré...
-Realicé...
-Optimicé...
-Participé...
-
-Devuelve únicamente la frase.
+- No agregues herramientas.
+- No agregues experiencia.
+- Conserva todos los términos técnicos.
+- Usa un verbo en pasado.
+- Máximo 25 palabras.
+- Devuelve únicamente el texto.
 
 Responsabilidad:
 
@@ -74,28 +48,17 @@ Responsabilidad:
     def prompt_logro(self, texto):
 
         return f"""
-Reescribe únicamente este logro.
+Reescribe este logro para un CV profesional.
 
-REGLAS
+REGLAS:
 
 - No inventes información.
 - No agregues tecnologías.
-- No cambies el significado.
-- Mantén una longitud similar.
-- Solo mejora la redacción.
-- Debe comenzar con un verbo en primera persona del pasado.
-- Nunca uses tercera persona.
-
-Ejemplos correctos:
-
-Administré...
-Implementé...
-Configuré...
-Realicé...
-Optimicé...
-Participé...
-
-Devuelve únicamente la frase.
+- No agregues experiencia.
+- Conserva todos los términos técnicos.
+- Usa un verbo en pasado.
+- Máximo 25 palabras.
+- Devuelve únicamente el texto.
 
 Logro:
 

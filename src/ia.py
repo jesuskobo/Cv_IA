@@ -115,20 +115,15 @@ Responsable de...
 
         return self.preguntar(prompt)
 
-
     def mejorar_responsabilidad(self, texto):
 
-        prompt = self.builder.prompt_responsabilidad(
-            texto
-        )
+        prompt = self.builder.prompt_responsabilidad(texto)
 
         return self.preguntar(prompt)
 
 
     def mejorar_logro(self, texto):
 
-        prompt = self.builder.prompt_logro(
-            texto
-        )
+        prompt = self.builder.prompt_logro(texto)
 
         return self.preguntar(prompt)

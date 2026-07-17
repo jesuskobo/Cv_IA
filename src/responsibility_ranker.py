@@ -1,21 +1,27 @@
 class ResponsibilityRanker:
 
-    def ordenar(self, responsabilidades, skills_oferta):
+    def ordenar(self, items, skills_oferta):
 
-        for responsabilidad in responsabilidades:
+        for item in items:
 
-            score = 0
+            # Coincidencias con la oferta
+            coincidencias = 0
 
-            for skill in responsabilidad["skills"]:
+            for skill in item["skills"]:
 
                 if skill.lower() in skills_oferta:
-                    score += 1
+                    coincidencias += 1
 
-            responsabilidad["score"] = score
+            # Prioridad definida en el CV maestro
+            prioridad = item.get("prioridad", 0)
 
-        responsabilidades.sort(
+            # Score final
+            item["score"] = coincidencias * 10 + prioridad
+
+        # Orden descendente
+        items.sort(
             key=lambda x: x["score"],
             reverse=True
         )
 
-        return responsabilidades
+        return items

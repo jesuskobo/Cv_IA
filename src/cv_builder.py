@@ -1,10 +1,12 @@
 import copy
 
 from src.responsibility_filter import ResponsibilityFilter
-from src.summary_builder import SummaryBuilder
 from src.responsibility_ranker import ResponsibilityRanker
+from src.summary_builder import SummaryBuilder
 from src.title_builder import TitleBuilder
 from src.ia import IA
+from src.responsibility_deduplicator import ResponsibilityDeduplicator
+from src.subtitle_builder import SubtitleBuilder
 
 
 class CVBuilder:
@@ -12,64 +14,49 @@ class CVBuilder:
     def __init__(self):
 
         self.responsibility_filter = ResponsibilityFilter()
-        self.summary_builder = SummaryBuilder()
         self.ranker = ResponsibilityRanker()
+        self.summary_builder = SummaryBuilder()
         self.title_builder = TitleBuilder()
         self.ia = IA()
+        self.deduplicator = ResponsibilityDeduplicator()
+        self.subtitle_builder = SubtitleBuilder()
 
     def construir(self, skills_oferta, cv_maestro, experiencias):
 
+        # ==========================================
+        # Copiar CV Maestro
+        # ==========================================
+
         cv = copy.deepcopy(cv_maestro)
 
-        # ===========================
-        # Resumen
-        # ===========================
-
-        resumen = self.summary_builder.construir(
-            skills_oferta
-        )
-
-        cv["resumen"] = self.ia.mejorar_resumen(
-            resumen,
-            " ".join(skills_oferta)
-        )
-
-        # ===========================
-        # Experiencias
-        # ===========================
+        # ==========================================
+        # Experiencias seleccionadas
+        # ==========================================
 
         cv["experiencia"] = experiencias
 
-        # ===========================
-        # Competencias
-        # ===========================
-
-        cv["competencias"] = self.filtrar_competencias(
-            cv["competencias"],
-            skills_oferta
-        )
-
-        # ===========================
-        # Título
-        # ===========================
-
-        cv["perfil"]["titulo"] = self.title_builder.construir(
-            skills_oferta
-        )
-
-        # ===========================
-        # Responsabilidades y Logros
-        # ===========================
+        # ==========================================
+        # Filtrar experiencias
+        # ==========================================
 
         for trabajo in cv["experiencia"]:
 
-            # ---------------------------
+            # ======================================
             # Responsabilidades
-            # ---------------------------
+            # ======================================
 
-            trabajo["responsabilidades"] = self.responsibility_filter.filtrar(
-                trabajo["responsabilidades"],
-                skills_oferta
+            trabajo["responsabilidades"] = (
+                self.responsibility_filter.filtrar(
+                    trabajo["responsabilidades"],
+                    skills_oferta
+                )
+            )
+
+            trabajo["responsabilidades"] = (
+                self.ranker.ordenar(
+                    trabajo["responsabilidades"],
+                    skills_oferta
+                )
             )
 
             trabajo["responsabilidades"] = self.ranker.ordenar(
@@ -77,19 +64,40 @@ class CVBuilder:
                 skills_oferta
             )
 
-            for r in trabajo["responsabilidades"]:
+            trabajo["responsabilidades"] = self.deduplicator.deduplicar(
+                trabajo["responsabilidades"]
+            )
 
-                r["descripcion"] = self.ia.mejorar_responsabilidad(
-                    r["descripcion"]
+            # Mantener máximo 8
+            trabajo["responsabilidades"] = (
+                trabajo["responsabilidades"][:8]
+            )
+
+            # Mejorar redacción
+            for responsabilidad in trabajo["responsabilidades"]:
+
+                responsabilidad["descripcion"] = (
+                    self.ia.mejorar_responsabilidad(
+                        responsabilidad["descripcion"]
+                    )
                 )
 
-            # ---------------------------
+            # ======================================
             # Logros
-            # ---------------------------
+            # ======================================
 
-            trabajo["logros"] = self.responsibility_filter.filtrar(
-                trabajo["logros"],
-                skills_oferta
+            trabajo["logros"] = (
+                self.responsibility_filter.filtrar(
+                    trabajo["logros"],
+                    skills_oferta
+                )
+            )
+
+            trabajo["logros"] = (
+                self.ranker.ordenar(
+                    trabajo["logros"],
+                    skills_oferta
+                )
             )
 
             trabajo["logros"] = self.ranker.ordenar(
@@ -97,11 +105,61 @@ class CVBuilder:
                 skills_oferta
             )
 
-            for l in trabajo["logros"]:
+            trabajo["logros"] = self.deduplicator.deduplicar(
+                trabajo["logros"]
+            )
 
-                l["descripcion"] = self.ia.mejorar_logro(
-                    l["descripcion"]
+            # Mantener máximo 3
+            trabajo["logros"] = (
+                trabajo["logros"][:3]
+            )
+
+            # Mejorar redacción
+            for logro in trabajo["logros"]:
+
+                logro["descripcion"] = (
+                    self.ia.mejorar_logro(
+                        logro["descripcion"]
+                    )
                 )
+
+        # ==========================================
+        # Construir resumen
+        # ==========================================
+
+        resumen = self.summary_builder.construir(
+            cv["experiencia"]
+        )
+
+        cv["resumen"] = self.ia.mejorar_resumen(
+            resumen,
+            " ".join(skills_oferta)
+        )
+
+        # ==========================================
+        # Competencias
+        # ==========================================
+
+        cv["competencias"] = self.filtrar_competencias(
+            cv["competencias"],
+            skills_oferta
+        )
+
+        # ==========================================
+        # Título
+        # ==========================================
+
+        cv["perfil"]["titulo"] = (
+            self.title_builder.construir(
+                skills_oferta
+            )
+        )
+
+        cv["perfil"]["subtitulo"] = (
+            self.subtitle_builder.construir(
+                cv["experiencia"]
+            )
+        )
 
         return cv
 

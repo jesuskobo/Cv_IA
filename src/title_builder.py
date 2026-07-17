@@ -2,55 +2,76 @@ class TitleBuilder:
 
     def construir(self, skills):
 
+        skills = [s.lower() for s in skills]
+
+        # ==========================
         # DevOps
-        if self.contiene(skills, [
+        # ==========================
+
+        if any(s in skills for s in [
+            "devops",
             "docker",
             "kubernetes",
-            "terraform"
+            "terraform",
+            "jenkins",
+            "ansible"
         ]):
-            return "Ingeniero DevOps"
+            return "DevOps Engineer"
 
-        # Automatización
-        if self.contiene(skills, [
-            "python",
-            "ansible",
-            "bash"
-        ]):
-            return "Ingeniero de Automatización"
-
-        # Observabilidad
-        if self.contiene(skills, [
-            "grafana",
-            "zabbix",
-            "nagios",
-            "prometheus"
-        ]):
-            return "Ingeniero de Observabilidad"
-
+        # ==========================
         # Cloud
-        if self.contiene(skills, [
+        # ==========================
+
+        if any(s in skills for s in [
             "azure",
             "aws",
-            "gcp"
+            "gcp",
+            "cloud"
         ]):
-            return "Ingeniero Cloud"
+            return "Cloud Engineer"
 
+        # ==========================
+        # Linux
+        # ==========================
+
+        if "linux" in skills:
+            return "Administrador Linux"
+
+        # ==========================
         # Infraestructura
-        if self.contiene(skills, [
-            "linux",
+        # ==========================
+
+        if any(s in skills for s in [
             "windows server",
+            "active directory",
+            "gpo",
+            "vpn",
+            "vlan",
+            "hyper-v",
             "vmware"
         ]):
             return "Ingeniero de Infraestructura"
 
+        # ==========================
+        # Observabilidad
+        # ==========================
+
+        if any(s in skills for s in [
+            "zabbix",
+            "grafana",
+            "nagios"
+        ]):
+            return "Ingeniero de Infraestructura"
+
+        # ==========================
+        # Seguridad
+        # ==========================
+
+        if any(s in skills for s in [
+            "hardening",
+            "ciberseguridad",
+            "seguridad informática"
+        ]):
+            return "Ingeniero de Infraestructura"
+
         return "Ingeniero de Sistemas"
-
-
-    def contiene(self, skills, lista):
-
-        for skill in lista:
-
-            if skill in skills:
-                return True
-
-        return False

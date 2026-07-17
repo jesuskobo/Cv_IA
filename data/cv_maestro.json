@@ -1,27 +1,24 @@
 {
   "perfil": {
     "nombre": "Jesús David Rivera Rodríguez",
-    "titulo": "Ingeniero de Infraestructura Linux",
-    "subtitulo": "Automatización | Observabilidad | Windows Server | Microsoft Azure",
+    "titulo": "Ingeniero Cloud",
+    "subtitulo": "Automatización | Observabilidad | windows server | azure",
     "ciudad": "Barranquilla, Colombia",
     "telefono": "3225095716",
     "correo": "jesusr14r@gmail.com",
     "linkedin": "https://linkedin.com/in/jesus-rivera-6178a41a8"
   },
-  "resumen": "Ingeniero de Sistemas con más de cinco años de experiencia administrando infraestructura tecnológica para organizaciones con operación nacional. Experiencia en Linux, Windows Server, automatización con Bash, Python y Ansible, observabilidad con Zabbix, Grafana y Nagios, bases de datos SQL Server y PostgreSQL, y Microsoft Azure. He participado en proyectos de migración, hardening, automatización e integración de plataformas críticas. Actualmente fortaleciendo conocimientos en Docker, Kubernetes, Terraform y CI/CD.",
+  "resumen": "Ingeniero de Sistemas con más de cinco años de experiencia administrando infraestructura tecnológica para organizaciones con operación nacional. Especializado en servidores linux y windows server, automatización mediante Python, Bash y Ansible, monitoreo con zabbix, grafana y Nagios, administración de plataformas azure, redes, virtualización y bases de datos. Experiencia implementando soluciones orientadas a la disponibilidad, continuidad operativa, seguridad y optimización de la infraestructura.",
   "competencias": {
     "infraestructura": [
-      "Linux",
-      "Windows Server",
+      "linux",
       "Red Hat",
       "Ubuntu",
       "Debian",
-      "Rocky Linux",
-      "Oracle Linux",
-      "AlmaLinux",
-      "LVM",
-      "SSH",
-      "Systemd"
+      "Rocky linux",
+      "Oracle linux",
+      "Almalinux",
+      "windows server"
     ],
     "automatizacion": [
       "Python",
@@ -30,19 +27,19 @@
       "Git"
     ],
     "observabilidad": [
-      "Zabbix",
-      "Grafana",
+      "zabbix",
+      "grafana",
       "Nagios"
-    ],
-    "cloud": [
-      "Microsoft Azure",
-      "Azure SQL",
-      "Intune"
     ],
     "bases_datos": [
       "SQL Server",
       "PostgreSQL",
+      "azure SQL",
       "SQLite"
+    ],
+    "cloud": [
+      "azure",
+      "Intune"
     ],
     "redes": [
       "TCP/IP",
@@ -68,107 +65,281 @@
   "experiencia": [
     {
       "empresa": "XOLIT",
-      "cargo": "Ingeniero de Infraestructura Linux y Automatización",
+      "cargo": "Ingeniero de Infraestructura linux y Automatización",
       "sector": "Servicios TI",
-      "prioridad": 10,
       "inicio": "2026",
-      "fin": "2026",
-      "descripcion": "Administración y automatización de infraestructura Linux en ambientes de producción.",
-      "skills": [
-        "Linux",
-        "LVM",
-        "Bash",
-        "Ansible",
-        "Grafana",
-        "Zabbix",
-        "Hardening",
-        "VoIP",
-        "SFTP",
-        "Cloud"
-      ],
+      "fin": "Actualidad",
+      "descripcion": "Administración de infraestructura linux, automatización y fortalecimiento de la seguridad en ambientes de producción para diferentes clientes.",
       "responsabilidades": [
         {
-          "descripcion": "Administré servidores Linux en ambientes de producción.",
+          "id": "xolit_r001",
+          "descripcion": "Administración de servidores linux en ambientes de producción garantizando la disponibilidad de los servicios.",
           "skills": [
-            "Linux"
-          ]
+            "linux",
+            "servidores"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Realicé expansión de discos y administración LVM.",
+          "id": "xolit_r002",
+          "descripcion": "Implementación de actividades de hardening para fortalecer la seguridad de servidores linux.",
           "skills": [
-            "Linux",
-            "LVM"
-          ]
+            "linux",
+            "hardening",
+            "ciberseguridad"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé hardening de servidores Linux.",
+          "id": "xolit_r003",
+          "descripcion": "Administración de almacenamiento mediante LVM realizando expansión de discos y crecimiento de sistemas de archivos.",
           "skills": [
-            "Linux",
-            "Hardening"
-          ]
+            "linux",
+            "lvm",
+            "filesystem"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Automaticé tareas mediante Bash y Ansible.",
+          "id": "xolit_r004",
+          "descripcion": "Automatización de tareas administrativas utilizando Bash.",
           "skills": [
-            "Bash",
-            "Ansible"
-          ]
+            "bash",
+            "automatizacion"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Administré plataformas VoIP e IVR.",
+          "id": "xolit_r005",
+          "descripcion": "Automatización de procesos mediante Python para reducir tareas repetitivas.",
           "skills": [
-            "VoIP"
-          ]
+            "python",
+            "automatizacion"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé dashboards Grafana utilizando la API de Zabbix.",
+          "id": "xolit_r006",
+          "descripcion": "Diagnóstico y solución de incidentes relacionados con infraestructura linux.",
           "skills": [
-            "Grafana",
-            "Zabbix"
-          ]
+            "linux",
+            "troubleshooting"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Participé en migraciones SFTP y plataformas Cloud.",
+          "id": "xolit_r007",
+          "descripcion": "Análisis de consumo de CPU, memoria, procesos y almacenamiento para optimizar el rendimiento de los servidores.",
           "skills": [
-            "SFTP",
-            "Cloud"
-          ]
+            "linux",
+            "performance",
+            "monitoreo"
+          ],
+          "prioridad": 4
         },
         {
-          "descripcion": "Realicé análisis de capacidad (Sizing).",
+          "id": "xolit_r008",
+          "descripcion": "Administración de servicios del sistema utilizando systemd.",
           "skills": [
-            "Sizing"
-          ]
+            "linux",
+            "systemd"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r009",
+          "descripcion": "Gestión de usuarios, grupos y permisos siguiendo el principio de mínimo privilegio.",
+          "skills": [
+            "linux",
+            "usuarios",
+            "seguridad"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r010",
+          "descripcion": "Administración de sistemas de archivos y puntos de montaje.",
+          "skills": [
+            "linux",
+            "filesystem"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r011",
+          "descripcion": "Configuración y validación de respaldos de información crítica.",
+          "skills": [
+            "backup",
+            "linux"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r012",
+          "descripcion": "Análisis de logs del sistema para identificar incidentes y eventos de seguridad.",
+          "skills": [
+            "logs",
+            "linux"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r013",
+          "descripcion": "Aplicación de actualizaciones y parches del sistema operativo linux.",
+          "skills": [
+            "linux",
+            "patching"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r014",
+          "descripcion": "Validación del estado de servicios antes y después de ventanas de mantenimiento.",
+          "skills": [
+            "linux",
+            "mantenimiento"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_r015",
+          "descripcion": "Documentación técnica de procedimientos operativos e incidentes atendidos.",
+          "skills": [
+            "documentacion"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_r016",
+          "descripcion": "Implementación de controles de seguridad siguiendo lineamientos de hardening.",
+          "skills": [
+            "hardening",
+            "seguridad"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "xolit_r017",
+          "descripcion": "Participación en procesos de mejora continua para la infraestructura linux.",
+          "skills": [
+            "linux",
+            "infraestructura"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_r018",
+          "descripcion": "Soporte técnico sobre plataformas linux para ambientes de producción.",
+          "skills": [
+            "linux"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_r019",
+          "descripcion": "Administración de infraestructura bajo procedimientos de operación estandarizados.",
+          "skills": [
+            "infraestructura"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_r020",
+          "descripcion": "Seguimiento a incidentes hasta su cierre garantizando la continuidad operativa.",
+          "skills": [
+            "infraestructura",
+            "incidentes"
+          ],
+          "prioridad": 4
         }
       ],
       "logros": [
         {
-          "descripcion": "Participé en proyectos de hardening.",
+          "id": "xolit_l001",
+          "descripcion": "Implementé actividades de hardening para fortalecer la seguridad de servidores linux.",
           "skills": [
-            "Linux",
-            "Hardening"
-          ]
+            "linux",
+            "hardening"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé automatizaciones mediante Bash y Ansible.",
+          "id": "xolit_l002",
+          "descripcion": "Ejecuté expansiones de almacenamiento mediante LVM sin afectar la disponibilidad de los servicios.",
           "skills": [
-            "Bash",
-            "Ansible"
-          ]
+            "linux",
+            "lvm"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Mejoré la observabilidad mediante dashboards centralizados.",
+          "id": "xolit_l003",
+          "descripcion": "Automaticé tareas repetitivas utilizando Bash y Python reduciendo tiempos operativos.",
           "skills": [
-            "Grafana",
-            "Zabbix"
-          ]
+            "bash",
+            "python",
+            "automatizacion"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Participé en migraciones de servicios críticos.",
+          "id": "xolit_l004",
+          "descripcion": "Optimicé el rendimiento de servidores mediante análisis de recursos y ajustes de configuración.",
           "skills": [
-            "SFTP",
-            "Cloud"
-          ]
+            "linux",
+            "performance"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_l005",
+          "descripcion": "Contribuí al fortalecimiento de la seguridad mediante la implementación de controles de hardening.",
+          "skills": [
+            "seguridad",
+            "linux"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_l006",
+          "descripcion": "Reduje tiempos de atención de incidentes gracias a la automatización de procedimientos operativos.",
+          "skills": [
+            "automatizacion"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_l007",
+          "descripcion": "Mejoré la administración del almacenamiento mediante la estandarización de procedimientos LVM.",
+          "skills": [
+            "lvm"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "xolit_l008",
+          "descripcion": "Apoyé la continuidad operativa mediante actividades preventivas sobre servidores linux.",
+          "skills": [
+            "linux"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_l009",
+          "descripcion": "Documenté procedimientos técnicos para facilitar la operación y el soporte de la infraestructura.",
+          "skills": [
+            "documentacion"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "xolit_l010",
+          "descripcion": "Participé en iniciativas de mejora continua orientadas a la administración de infraestructura linux.",
+          "skills": [
+            "linux",
+            "infraestructura"
+          ],
+          "prioridad": 3
         }
       ]
     },
@@ -176,100 +347,340 @@
       "empresa": "KFC Colombia",
       "cargo": "Ingeniero de Infraestructura",
       "sector": "Retail",
-      "prioridad": 9,
       "inicio": "2020",
       "fin": "2026",
-      "descripcion": "Administración de infraestructura tecnológica para más de 300 sedes a nivel nacional.",
-      "skills": [
-        "Linux",
-        "Windows Server",
-        "Azure",
-        "Azure SQL",
-        "Python",
-        "Bash",
-        "SQL Server",
-        "PostgreSQL",
-        "Grafana",
-        "Zabbix",
-        "Nagios",
-        "VPN",
-        "VLAN",
-        "Sophos Firewall",
-        "Intune"
-      ],
+      "descripcion": "Administración de infraestructura tecnológica para más de 300 sedes a nivel nacional, garantizando la continuidad operativa de plataformas críticas, servidores, redes, bases de datos y sistemas de facturación utilizados por la operación.",
       "responsabilidades": [
         {
-          "descripcion": "Administré servidores Linux y Windows Server.",
+          "id": "kfc_r001",
+          "descripcion": "Administré la infraestructura tecnológica para más de 300 sedes a nivel nacional garantizando la continuidad operativa de los servicios.",
           "skills": [
-            "Linux",
-            "Windows Server"
-          ]
+            "infraestructura",
+            "servidores",
+            "alta disponibilidad"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé monitoreo mediante Zabbix, Grafana y Nagios.",
+          "id": "kfc_r002",
+          "descripcion": "Configuré, instalé y administré el sistema de facturación POS Maxpoint.",
           "skills": [
-            "Zabbix",
-            "Grafana",
-            "Nagios"
-          ]
+            "pos",
+            "maxpoint",
+            "facturacion"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Administré bases de datos SQL Server y PostgreSQL.",
+          "id": "kfc_r003",
+          "descripcion": "Configuré e instalé servidores para las plataformas de facturación POS y nómina.",
           "skills": [
-            "SQL Server",
-            "PostgreSQL"
-          ]
+            "windows server",
+            "linux",
+            "servidores"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Automaticé tareas mediante Python y Bash.",
+          "id": "kfc_r004",
+          "descripcion": "Administré servidores linux y windows server en ambientes de producción.",
           "skills": [
-            "Python",
-            "Bash"
-          ]
+            "linux",
+            "windows server",
+            "servidores"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Administré infraestructura Microsoft Azure.",
+          "id": "kfc_r005",
+          "descripcion": "Administré azure e Intune para la gestión de dispositivos, credenciales administrativas y recuperación mediante BitLocker.",
           "skills": [
-            "Azure"
-          ]
+            "azure",
+            "intune",
+            "bitlocker"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Gestioné VPN, VLAN y Firewalls Sophos.",
+          "id": "kfc_r006",
+          "descripcion": "Administré bases de datos SQL Server, azure SQL y PostgreSQL realizando consultas CRUD, mantenimiento, depuración mediante SQL Profiler, gestión de procedimientos almacenados y análisis de logs.",
           "skills": [
-            "VPN",
-            "VLAN",
-            "Firewall"
-          ]
+            "sql server",
+            "azure sql",
+            "postgresql",
+            "crud",
+            "stored procedures",
+            "sql profiler"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r007",
+          "descripcion": "Configuré y administré kioscos de autoservicio integrados con el sistema POS.",
+          "skills": [
+            "kiosko",
+            "pos"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "kfc_r008",
+          "descripcion": "Administré la plataforma KDS para la visualización y gestión de pedidos en cocina integrada con el sistema POS.",
+          "skills": [
+            "kds",
+            "pos"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "kfc_r009",
+          "descripcion": "Gestioné la integración mediante APIs REST con plataformas de domicilios como Didi, Rappi, Uber, iFood, Yango y pedidos propios utilizando Postman y Visual Studio Code.",
+          "skills": [
+            "api",
+            "rest",
+            "postman",
+            "json",
+            "vscode",
+            "didi",
+            "rappi",
+            "uber",
+            "ifood",
+            "yango"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r010",
+          "descripcion": "Administré la plataforma Pide y Recoge integrada mediante APIs con el sistema POS.",
+          "skills": [
+            "api",
+            "pos"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "kfc_r011",
+          "descripcion": "Configuré y administré impresoras térmicas Star, Posiflex, Epson y Ricoh utilizadas por el sistema POS y kioscos.",
+          "skills": [
+            "impresoras",
+            "pos"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "kfc_r012",
+          "descripcion": "Configuré y administré cajones monederos integrados con estaciones POS.",
+          "skills": [
+            "pos"
+          ],
+          "prioridad": 2
+        },
+        {
+          "id": "kfc_r013",
+          "descripcion": "Administré lectores QR para la validación de cupones y promociones integradas con el sistema POS.",
+          "skills": [
+            "qr",
+            "pos"
+          ],
+          "prioridad": 2
+        },
+        {
+          "id": "kfc_r014",
+          "descripcion": "Administré Active Directory para la gestión de usuarios, equipos y permisos.",
+          "skills": [
+            "active directory",
+            "ad"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r015",
+          "descripcion": "Implementé y administré políticas de grupo (GPO) para fortalecer la seguridad y estandarización de los equipos.",
+          "skills": [
+            "gpo",
+            "windows server",
+            "seguridad"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r016",
+          "descripcion": "Administré infraestructura de red mediante equipos Cisco Meraki y Huawei utilizados en la operación corporativa.",
+          "skills": [
+            "cisco meraki",
+            "huawei",
+            "redes"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r017",
+          "descripcion": "Administré conexiones VPN para garantizar la comunicación segura entre sedes y servicios corporativos.",
+          "skills": [
+            "vpn",
+            "redes"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r018",
+          "descripcion": "Administré segmentación de red mediante VLAN para la infraestructura corporativa.",
+          "skills": [
+            "vlan",
+            "redes"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "kfc_r019",
+          "descripcion": "Monitoreé servidores y servicios críticos utilizando Nagios, zabbix y grafana.",
+          "skills": [
+            "nagios",
+            "zabbix",
+            "grafana",
+            "monitoreo"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r020",
+          "descripcion": "Desarrollé automatizaciones utilizando Python, Bash y PowerShell para optimizar tareas operativas repetitivas.",
+          "skills": [
+            "python",
+            "bash",
+            "powershell",
+            "automatizacion"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_r021",
+          "descripcion": "Gestioné incidentes utilizando plataformas ITSM como Aranda, GLPI, ProactivaNet e InvGate.",
+          "skills": [
+            "glpi",
+            "aranda",
+            "proactivanet",
+            "invgate",
+            "itil"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "kfc_r022",
+          "descripcion": "Realicé instalación, mantenimiento y organización de infraestructura física en rack incluyendo servidores, switches y cableado estructurado.",
+          "skills": [
+            "rack",
+            "switch",
+            "cableado estructurado"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "kfc_r023",
+          "descripcion": "Coordiné la instalación y configuración de sistemas de videovigilancia para nuevas aperturas y sedes existentes.",
+          "skills": [
+            "camaras",
+            "cctv"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "kfc_r024",
+          "descripcion": "Administré la integración de datáfonos Credibanco y Redeban con el sistema POS.",
+          "skills": [
+            "credibanco",
+            "redeban",
+            "api",
+            "pos"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "kfc_r025",
+          "descripcion": "Brindé soporte sobre Microsoft Office y Outlook para usuarios finales y procesos corporativos.",
+          "skills": [
+            "office",
+            "outlook",
+            "excel"
+          ],
+          "prioridad": 2
         }
       ],
       "logros": [
         {
-          "descripcion": "Administré infraestructura para más de 300 sedes.",
+          "id": "kfc_l001",
+          "descripcion": "Administré la infraestructura tecnológica de más de 300 sedes distribuidas a nivel nacional garantizando la continuidad operativa de la compañía.",
           "skills": [
-            "Linux",
-            "Windows Server"
-          ]
+            "infraestructura",
+            "alta disponibilidad"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Automaticé tareas reduciendo trabajo manual.",
+          "id": "kfc_l002",
+          "descripcion": "Implementé y administré integraciones mediante APIs con plataformas de domicilios como Didi, Rappi, Uber, iFood, Yango y pedidos propios.",
           "skills": [
-            "Python",
-            "Bash"
-          ]
+            "api",
+            "integraciones",
+            "didi",
+            "rappi",
+            "uber",
+            "ifood",
+            "yango"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Fortalecí la observabilidad mediante dashboards centralizados.",
+          "id": "kfc_l003",
+          "descripcion": "Automaticé tareas operativas utilizando Python, Bash y PowerShell reduciendo tiempos de ejecución y actividades manuales.",
           "skills": [
-            "Grafana",
-            "Zabbix",
-            "Nagios"
-          ]
+            "python",
+            "bash",
+            "powershell",
+            "automatizacion"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Participé en proyectos de mejora continua.",
+          "id": "kfc_l004",
+          "descripcion": "Administré plataformas de monitoreo como Nagios, zabbix y grafana para el seguimiento de servidores y servicios críticos.",
           "skills": [
-            "Infraestructura"
-          ]
+            "nagios",
+            "zabbix",
+            "grafana"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_l005",
+          "descripcion": "Administré entornos azure, Azure SQL y PostgreSQL soportando aplicaciones críticas para la operación.",
+          "skills": [
+            "azure",
+            "azure sql",
+            "postgresql"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_l006",
+          "descripcion": "Implementé políticas de seguridad mediante Active Directory, GPO, BitLocker y Microsoft Intune para fortalecer la administración de equipos corporativos.",
+          "skills": [
+            "active directory",
+            "gpo",
+            "bitlocker",
+            "intune"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "kfc_l007",
+          "descripcion": "Participé en la implementación y soporte de soluciones POS, kioscos y KDS para optimizar la operación de los restaurantes.",
+          "skills": [
+            "pos",
+            "kiosko",
+            "kds"
+          ],
+          "prioridad": 4
         }
       ]
     },
@@ -277,157 +688,380 @@
       "empresa": "ARUS",
       "cargo": "Analista de Sistemas",
       "sector": "Servicios TI",
-      "prioridad": 7,
       "inicio": "2019",
       "fin": "2020",
-      "descripcion": "Administración de infraestructura tecnológica y redes corporativas.",
-      "skills": [
-        "Linux",
-        "Windows Server",
-        "VPN",
-        "LAN",
-        "WAN",
-        "Avaya"
-      ],
+      "descripcion": "Soporte y administración de infraestructura tecnológica, sistemas operativos, redes, servidores y herramientas de colaboración para usuarios corporativos, garantizando la continuidad de los servicios de TI.",
       "responsabilidades": [
         {
-          "descripcion": "Administré infraestructura LAN/WAN.",
+          "id": "arus_r001",
+          "descripcion": "Configuré equipos nuevos realizando ingreso al dominio, perfilado de usuarios e instalación del software corporativo.",
           "skills": [
-            "LAN",
-            "WAN"
-          ]
+            "windows",
+            "active directory",
+            "dominio"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé conexiones VPN.",
+          "id": "arus_r002",
+          "descripcion": "Configuré conexiones VPN para usuarios corporativos garantizando el acceso remoto seguro a la infraestructura.",
           "skills": [
-            "VPN"
-          ]
+            "vpn",
+            "redes"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Administré servidores Windows Server y Linux.",
+          "id": "arus_r003",
+          "descripcion": "Brindé soporte sobre Microsoft Outlook, Office 365 y aplicaciones de productividad empresarial.",
           "skills": [
-            "Windows Server",
-            "Linux"
-          ]
+            "office 365",
+            "outlook",
+            "office"
+          ],
+          "prioridad": 4
         },
         {
-          "descripcion": "Participé en proyectos de migración tecnológica.",
+          "id": "arus_r004",
+          "descripcion": "Resolví incidentes relacionados con Microsoft Teams, Skype Empresarial y plataformas de videoconferencia.",
           "skills": [
-            "Migración"
-          ]
+            "teams",
+            "skype",
+            "videoconferencia"
+          ],
+          "prioridad": 4
         },
         {
-          "descripcion": "Configuré plataformas de telefonía IP Avaya.",
+          "id": "arus_r005",
+          "descripcion": "Brindé soporte para acceso a intranet corporativa y plataforma Salesforce.",
           "skills": [
-            "Avaya"
-          ]
+            "salesforce",
+            "intranet"
+          ],
+          "prioridad": 3
         },
         {
-          "descripcion": "Documenté procedimientos e infraestructura tecnológica.",
+          "id": "arus_r006",
+          "descripcion": "Realicé soporte de primer nivel para sistemas operativos Windows y linux.",
           "skills": [
-            "Documentación"
-          ]
+            "windows",
+            "linux"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r007",
+          "descripcion": "Escalé incidentes relacionados con servidores y plataformas de infraestructura tecnológica.",
+          "skills": [
+            "servidores",
+            "infraestructura"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "arus_r008",
+          "descripcion": "Instalé y actualicé soluciones antivirus en estaciones de trabajo corporativas.",
+          "skills": [
+            "antivirus",
+            "seguridad"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "arus_r009",
+          "descripcion": "Configuré conexiones mediante Escritorio Remoto para soporte técnico a usuarios.",
+          "skills": [
+            "rdp",
+            "escritorio remoto"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "arus_r010",
+          "descripcion": "Gestioné solicitudes relacionadas con videoconferencias corporativas y herramientas de colaboración.",
+          "skills": [
+            "teams",
+            "videoconferencia"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "arus_r011",
+          "descripcion": "Administré solicitudes de ampliación de buzones de correo y novedades de usuarios.",
+          "skills": [
+            "exchange",
+            "outlook"
+          ],
+          "prioridad": 3
+        },
+        {
+          "id": "arus_r012",
+          "descripcion": "Configuré y administré sistemas operativos Windows y linux en estaciones de trabajo corporativas.",
+          "skills": [
+            "windows",
+            "linux"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r013",
+          "descripcion": "Administré redes LAN, WAN y Wi-Fi para garantizar la conectividad de los usuarios.",
+          "skills": [
+            "lan",
+            "wan",
+            "wifi",
+            "redes"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r014",
+          "descripcion": "Brindé soporte a servidores administrando servicios de red y recursos compartidos.",
+          "skills": [
+            "windows server",
+            "linux",
+            "servidores"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r015",
+          "descripcion": "Administré plataformas de telefonía IP Avaya y 3CX.",
+          "skills": [
+            "avaya",
+            "3cx",
+            "telefonia ip"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "arus_r016",
+          "descripcion": "Configuré y monitoreé infraestructura tecnológica utilizando Nagios.",
+          "skills": [
+            "nagios",
+            "monitoreo"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r017",
+          "descripcion": "Administré usuarios, grupos y permisos mediante Active Directory.",
+          "skills": [
+            "active directory",
+            "windows server"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_r018",
+          "descripcion": "Brindé capacitación técnica a usuarios sobre herramientas corporativas.",
+          "skills": [
+            "capacitacion"
+          ],
+          "prioridad": 2
+        },
+        {
+          "id": "arus_r019",
+          "descripcion": "Colaboré con equipos multidisciplinarios para resolver incidentes tecnológicos y garantizar la continuidad del servicio.",
+          "skills": [
+            "trabajo en equipo",
+            "soporte"
+          ],
+          "prioridad": 2
         }
       ],
       "logros": [
         {
-          "descripcion": "Participé en proyectos de modernización tecnológica.",
+          "id": "arus_l001",
+          "descripcion": "Brindé soporte técnico para plataformas Windows, linux, servidores y redes corporativas.",
           "skills": [
-            "Windows Server",
-            "Linux"
-          ]
+            "windows",
+            "linux",
+            "servidores",
+            "redes"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé soluciones VPN.",
+          "id": "arus_l002",
+          "descripcion": "Administré Active Directory para la gestión de usuarios, grupos y recursos corporativos.",
           "skills": [
-            "VPN"
-          ]
+            "active directory"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Apoyé procesos de estandarización de infraestructura.",
+          "id": "arus_l003",
+          "descripcion": "Configuré y administré conexiones VPN permitiendo el acceso remoto seguro de los usuarios.",
           "skills": [
-            "Infraestructura"
-          ]
+            "vpn"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_l004",
+          "descripcion": "Monitoreé infraestructura tecnológica mediante Nagios para detectar incidentes de forma proactiva.",
+          "skills": [
+            "nagios",
+            "monitoreo"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "arus_l005",
+          "descripcion": "Administré plataformas de telefonía IP Avaya y 3CX para usuarios corporativos.",
+          "skills": [
+            "avaya",
+            "3cx"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "arus_l006",
+          "descripcion": "Configuré equipos corporativos garantizando su correcta integración al dominio y a la infraestructura empresarial.",
+          "skills": [
+            "windows",
+            "active directory"
+          ],
+          "prioridad": 4
         }
       ]
     },
     {
       "empresa": "COS",
       "cargo": "Analista de Infraestructura",
-      "sector": "Infraestructura TI",
-      "prioridad": 6,
+      "sector": "Servicios TI",
       "inicio": "2018",
       "fin": "2019",
-      "descripcion": "Implementación de infraestructura tecnológica para nuevos clientes.",
-      "skills": [
-        "Linux",
-        "Windows Server",
-        "VLAN",
-        "Firewall",
-        "DMZ",
-        "Cableado Estructurado",
-        "CCTV"
-      ],
+      "descripcion": "Implementación de infraestructura tecnológica, redes, servidores y sistemas de seguridad física para clientes corporativos.",
       "responsabilidades": [
         {
-          "descripcion": "Implementé infraestructura de red para nuevos clientes.",
+          "id": "cos_r001",
+          "descripcion": "Diseñé e implementé redes LAN para clientes corporativos.",
           "skills": [
-            "Infraestructura"
-          ]
+            "lan",
+            "redes"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Configuré servidores Windows Server y Linux.",
+          "id": "cos_r002",
+          "descripcion": "Implementé cableado estructurado para la infraestructura tecnológica de nuevas instalaciones.",
           "skills": [
-            "Windows Server",
-            "Linux"
-          ]
+            "cableado estructurado",
+            "infraestructura"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé VLAN y DMZ.",
+          "id": "cos_r003",
+          "descripcion": "Realicé el levantamiento e implementación de infraestructura tecnológica desde cero.",
           "skills": [
-            "VLAN",
-            "DMZ"
-          ]
+            "infraestructura"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Configuré firewalls perimetrales.",
+          "id": "cos_r004",
+          "descripcion": "Configuré y administré servidores linux Red Hat en ambientes corporativos.",
           "skills": [
-            "Firewall"
-          ]
+            "linux",
+            "red hat",
+            "servidores"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Implementé soluciones de videovigilancia.",
+          "id": "cos_r005",
+          "descripcion": "Configuré y administré servidores windows server 2012 y versiones posteriores.",
           "skills": [
-            "CCTV"
-          ]
+            "windows server",
+            "servidores"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Realicé instalación de cableado estructurado y racks.",
+          "id": "cos_r006",
+          "descripcion": "Implementé firewalls para fortalecer la seguridad de la infraestructura de red.",
           "skills": [
-            "Cableado Estructurado"
-          ]
+            "firewall",
+            "seguridad"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "cos_r007",
+          "descripcion": "Configuré VLAN para segmentar la red corporativa.",
+          "skills": [
+            "vlan",
+            "redes"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "cos_r008",
+          "descripcion": "Implementé zonas DMZ para proteger servicios expuestos a Internet.",
+          "skills": [
+            "dmz",
+            "seguridad",
+            "redes"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "cos_r009",
+          "descripcion": "Diseñé e implementé sistemas de videovigilancia CCTV digitales y analógicos.",
+          "skills": [
+            "cctv",
+            "videovigilancia"
+          ],
+          "prioridad": 4
+        },
+        {
+          "id": "cos_r010",
+          "descripcion": "Administré sistemas CCTV garantizando su continuidad operativa.",
+          "skills": [
+            "cctv"
+          ],
+          "prioridad": 4
         }
       ],
       "logros": [
         {
-          "descripcion": "Participé en implementaciones de infraestructura.",
+          "id": "cos_l001",
+          "descripcion": "Implementé infraestructura tecnológica completa para nuevos proyectos corporativos.",
           "skills": [
-            "Infraestructura"
-          ]
+            "infraestructura"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Fortalecí la seguridad perimetral.",
+          "id": "cos_l002",
+          "descripcion": "Configuré servidores linux Red Hat y windows server para diferentes entornos empresariales.",
           "skills": [
-            "Firewall"
-          ]
+            "linux",
+            "red hat",
+            "windows server"
+          ],
+          "prioridad": 5
         },
         {
-          "descripcion": "Apoyé el despliegue de infraestructura física.",
+          "id": "cos_l003",
+          "descripcion": "Implementé segmentación de red mediante VLAN y zonas DMZ para fortalecer la seguridad.",
           "skills": [
-            "Cableado Estructurado",
-            "Windows Server",
-            "Linux"
-          ]
+            "vlan",
+            "dmz",
+            "seguridad"
+          ],
+          "prioridad": 5
+        },
+        {
+          "id": "cos_l004",
+          "descripcion": "Implementé sistemas de videovigilancia CCTV asegurando la continuidad del servicio.",
+          "skills": [
+            "cctv"
+          ],
+          "prioridad": 4
         }
       ]
     }
@@ -435,24 +1069,21 @@
   "educacion": [
     {
       "titulo": "Ingeniería de Sistemas",
-      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)"
+      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)",
+      "nivel": "Profesional",
+      "estado": "Finalizado"
     },
     {
       "titulo": "Tecnólogo en Mantenimiento de Equipos y Redes",
-      "institucion": "Servicio Nacional de Aprendizaje (SENA)"
+      "institucion": "Servicio Nacional de Aprendizaje (SENA)",
+      "nivel": "Tecnólogo",
+      "estado": "Finalizado"
     },
     {
       "titulo": "Diplomado en Excel y Power BI",
-      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)"
-    }
-  ],
-  "certificaciones": [
-    {
-      "nombre": "Microsoft Azure Fundamentals",
-      "codigo": "AZ-900"
-    },
-    {
-      "nombre": "IBM Cybersecurity Fundamentals"
+      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)",
+      "nivel": "Diplomado",
+      "estado": "Finalizado"
     }
   ],
   "idiomas": [
@@ -464,5 +1095,14 @@
       "idioma": "Inglés",
       "nivel": "B1"
     }
-  ]
+  ],
+  "objetivo_profesional": {
+    "roles": [
+      "Administrador linux",
+      "Ingeniero de Infraestructura",
+      "DevOps",
+      "Cloud Engineer",
+      "Site Reliability Engineer"
+    ]
+  }
 }
