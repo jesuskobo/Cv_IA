@@ -7,6 +7,7 @@ __pycache__/
 # Directorios de salida y logs (No queremos subir los resultados generados)
 /salida/
 /logs/
+data/cv_maestro.json
 
 # Entornos virtuales (Si usas uno, esto es obligatorio)
 venv/

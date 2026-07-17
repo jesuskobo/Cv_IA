@@ -1,0 +1,65 @@
+{
+  "perfil": {
+    "nombre": "Nombre Apellido",
+    "titulo": "Ingeniero Cloud / DevOps",
+    "subtitulo": "Automatización | Observabilidad | Linux | Azure",
+    "ciudad": "Ciudad, País",
+    "telefono": "0000000000",
+    "correo": "correo@ejemplo.com",
+    "linkedin": "https://linkedin.com/in/tu-perfil"
+  },
+  "resumen": "Ingeniero con experiencia en administración de infraestructura tecnológica, automatización y gestión de entornos Cloud.",
+  "competencias": {
+    "infraestructura": ["Linux", "Windows Server"],
+    "automatizacion": ["Python", "Bash", "Ansible"],
+    "cloud": ["Azure", "AWS"],
+    "observabilidad": ["Zabbix", "Grafana"]
+  },
+  "experiencia": [
+    {
+      "empresa": "Nombre de Empresa",
+      "cargo": "Cargo Profesional",
+      "sector": "Sector TI",
+      "inicio": "2024",
+      "fin": "Actualidad",
+      "descripcion": "Descripción breve del rol.",
+      "responsabilidades": [
+        {
+          "id": "ejemplo_r001",
+          "descripcion": "Administración de servidores y optimización de recursos.",
+          "skills": ["Linux", "Servidores"],
+          "prioridad": 5
+        }
+      ],
+      "logros": [
+        {
+          "id": "ejemplo_l001",
+          "descripcion": "Automatización de tareas críticas reduciendo tiempos de operación.",
+          "skills": ["Python", "Automatización"],
+          "prioridad": 5
+        }
+      ]
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Título Profesional",
+      "institucion": "Universidad",
+      "nivel": "Profesional",
+      "estado": "Finalizado"
+    }
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "B1"
+    }
+  ],
+  "objetivo_profesional": {
+    "roles": ["DevOps", "Cloud Engineer"]
+  }
+}
