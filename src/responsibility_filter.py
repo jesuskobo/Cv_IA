@@ -1,3 +1,7 @@
+# Filtro de responsabilidades.
+# Mantiene solo las responsabilidades que realmente coinciden con las skills
+# requeridas por la oferta laboral.
+
 from src.aliases import Aliases
 
 
@@ -7,6 +11,8 @@ class ResponsibilityFilter:
         self.aliases = Aliases()
 
     def filtrar(self, responsabilidades, skills_oferta):
+        # Mantiene solo las responsabilidades alineadas con las skills de la
+        # oferta laboral.
 
         resultado = []
 

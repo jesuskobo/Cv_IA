@@ -1,9 +1,15 @@
+# Constructor del resumen profesional.
+# Genera un resumen del perfil basado en las skills más frecuentes en las
+# experiencias seleccionadas para el CV adaptado.
+
 from collections import Counter
 
 
 class SummaryBuilder:
 
     def construir(self, experiencias):
+        # Construye un resumen profesional a partir de las skills más repetidas
+        # en las experiencias seleccionadas.
 
         contador = Counter()
 

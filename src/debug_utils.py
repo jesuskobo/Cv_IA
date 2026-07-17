@@ -1,3 +1,7 @@
+# Utilidades de depuración.
+# Centraliza los logs del proyecto para rastrear el progreso del flujo
+# desde la lectura de la oferta hasta la generación del documento final.
+
 import logging
 import os
 from pathlib import Path

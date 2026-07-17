@@ -1,3 +1,6 @@
+# Ranker de skills.
+# Asigna pesos a cada tecnología para calcular la puntuación ATS del CV.
+
 class SkillRanker:
 
     def __init__(self):
@@ -54,5 +57,7 @@ class SkillRanker:
         }
 
     def peso(self, skill):
+        # Devuelve el peso de una skill para el cálculo del ATS. Si no existe
+        # en la tabla, devuelve un valor base de 1.
 
         return self.pesos.get(skill.lower(), 1)

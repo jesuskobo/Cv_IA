@@ -1,3 +1,7 @@
+# Analizador de ofertas laborales.
+# Extrae las skills técnicas presentes en el texto de una oferta para luego
+# compararlas con el CV y seleccionar experiencias relevantes.
+
 import re
 from src.debug_utils import debug, info, warning
 
@@ -90,11 +94,14 @@ SKILLS = [
 
 
 def leer_oferta(ruta):
+    # Lee el contenido de un archivo de texto con la oferta laboral.
     with open(ruta, "r", encoding="utf-8") as f:
         return f.read()
 
 
 def extraer_skills(texto):
+    # Convierte el texto en minúsculas y busca coincidencias con las skills
+    # técnicas conocidas para construir una lista de habilidades detectadas.
     info("Extrayendo skills desde el texto de la oferta")
     debug(f"Texto de entrada recibido: {texto[:120]}...")
 

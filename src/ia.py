@@ -1,3 +1,7 @@
+# Módulo de integración con IA.
+# Mejora la redacción de responsabilidades, logros y resúmenes usando Ollama
+# cuando la IA está disponible.
+
 from src.debug_utils import debug, error, warning
 from src.prompt_builder import PromptBuilder
 
@@ -14,6 +18,8 @@ class IA:
         self.builder = PromptBuilder()
 
     def limpiar(self, texto):
+        # Limpia la respuesta de la IA eliminando prefijos comunes y formato
+        # innecesario antes de devolver el texto al CV.
 
         texto = texto.strip()
 
@@ -39,6 +45,8 @@ class IA:
         return texto.strip()
 
     def preguntar(self, prompt):
+        # Envía el texto al modelo de IA para mejorar la redacción, pero
+        # devuelve el texto original si la IA no está disponible.
         debug("Iniciando llamada a la IA para mejorar el texto")
 
         if chat is None:
@@ -123,6 +131,7 @@ Responsable de...
             return prompt
 
     def mejorar_resumen(self, resumen, oferta):
+        # Genera un prompt para mejorar el resumen profesional del CV.
 
         prompt = self.builder.prompt_resumen(
             resumen,
@@ -132,6 +141,7 @@ Responsable de...
         return self.preguntar(prompt)
 
     def mejorar_responsabilidad(self, texto):
+        # Genera un prompt para mejorar la redacción de una responsabilidad.
 
         prompt = self.builder.prompt_responsabilidad(texto)
 
@@ -139,6 +149,7 @@ Responsable de...
 
 
     def mejorar_logro(self, texto):
+        # Genera un prompt para mejorar la redacción de un logro.
 
         prompt = self.builder.prompt_logro(texto)
 

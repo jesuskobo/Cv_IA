@@ -1,9 +1,15 @@
+# Constructor del subtítulo del perfil.
+# Genera un subtítulo profesional a partir de las tecnologias más comunes
+# presentes en las experiencias seleccionadas.
+
 from collections import Counter
 
 
 class SubtitleBuilder:
 
     def construir(self, experiencias):
+        # Genera un subtítulo profesional con las tecnologías más relevantes
+        # presentes en las experiencias del CV.
 
         contador = Counter()
 
@@ -49,6 +55,8 @@ class SubtitleBuilder:
         return " | ".join(encontrados[:4])
 
     def formatear(self, skill):
+        # Convierte el nombre técnico de una skill a una etiqueta más legible
+        # para mostrarla en el subtítulo del perfil.
 
         nombres = {
             "linux": "Linux",

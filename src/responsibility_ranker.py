@@ -1,6 +1,12 @@
+# Ranker de responsabilidades.
+# Ordena los elementos según su relevancia para la oferta, usando coincidencias
+# de skills y una prioridad interna definida en el CV maestro.
+
 class ResponsibilityRanker:
 
     def ordenar(self, items, skills_oferta):
+        # Asigna un score a cada responsabilidad o logro según cuántas skills
+        # de la oferta coinciden y luego ordena de mayor a menor relevancia.
 
         for item in items:
 

@@ -1,3 +1,7 @@
+# Selector de experiencias relevantes.
+# Busca dentro del CV maestro las experiencias que mejor encajan con las
+# skills detectadas en la oferta laboral.
+
 import json
 from copy import deepcopy
 
@@ -18,6 +22,8 @@ class Selector:
         self.aliases = Aliases()
 
     def buscar(self, keywords):
+        # Recorre cada experiencia del CV maestro y evalúa si encaja con las
+        # skills de la oferta. Si encuentra coincidencias, la conserva con un score.
         info(f"Buscando experiencias para las keywords: {keywords}")
 
         experiencias = []

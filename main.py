@@ -1,3 +1,7 @@
+# Archivo principal del proyecto.
+# Coordina todo el flujo: leer la oferta, extraer skills, seleccionar
+# experiencias, construir el CV, calcular ATS y exportar el resultado.
+
 import json
 
 from src.analyzer import leer_oferta, extraer_skills

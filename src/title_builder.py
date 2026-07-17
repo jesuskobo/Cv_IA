@@ -1,6 +1,11 @@
+# Constructor del título del perfil.
+# Genera un título profesional según las skills detectadas en la oferta.
+
 class TitleBuilder:
 
     def construir(self, skills):
+        # Determina un título profesional según las skills que se hayan
+        # encontrado en la oferta y que estén presentes en el CV.
 
         skills = [s.lower() for s in skills]
 

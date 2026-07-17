@@ -1,3 +1,6 @@
+# Exportador a Word.
+# Genera un archivo DOCX a partir del CV estructurado usando una plantilla.
+
 import os
 
 from src.debug_utils import debug, error, info, project_path
@@ -11,6 +14,8 @@ except ImportError:
 class ExportadorDOCX:
 
     def exportar(self, cv, nombre_archivo="cv_generada.docx"):
+        # Prepara el contexto del CV y renderiza la plantilla DOCX para generar
+        # el documento final en formato Word.
 
         # ===========================
         # Abrir plantilla

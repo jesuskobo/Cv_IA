@@ -1,3 +1,6 @@
+# Constructor de prompts para la IA.
+# Genera los mensajes que se envían a Ollama para reescribir textos del CV.
+
 class PromptBuilder:
 
     def prompt_resumen(self, resumen, oferta):

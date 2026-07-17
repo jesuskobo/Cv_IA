@@ -1,3 +1,7 @@
+# Generador de vista previa en texto.
+# Produce una versión legible del CV en consola y la guarda en la carpeta
+# de salida para revisión rápida.
+
 import os
 from src.debug_utils import debug, info, project_path
 
@@ -5,6 +9,8 @@ from src.debug_utils import debug, info, project_path
 class GeneradorCV:
 
     def generar(self, cv):
+        # Compone una vista previa en texto del CV con experiencia, empresa,
+        # fechas, skills relevantes y logros para mostrarla en consola.
 
         texto = ""
 

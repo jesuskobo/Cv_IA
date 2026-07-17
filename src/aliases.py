@@ -1,3 +1,7 @@
+# Módulo de alias y equivalencias de skills.
+# Permite tratar términos relacionados como equivalentes, por ejemplo
+# "Azure" y "Microsoft Azure" o "Windows Server" y "Windows".
+
 import json
 from src.debug_utils import debug, info
 

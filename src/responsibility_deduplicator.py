@@ -1,6 +1,12 @@
+# Deduplicador de responsabilidades y logros.
+# Elimina elementos repetidos cuando varias experiencias comparten la misma
+# información técnica o textual.
+
 class ResponsibilityDeduplicator:
 
     def deduplicar(self, responsabilidades):
+        # Elimina elementos repetidos comparando su conjunto de skills, de modo
+        # que no aparezcan responsabilidades o logros duplicados en el CV.
 
         resultado = []
 

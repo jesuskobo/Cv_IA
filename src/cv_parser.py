@@ -1,3 +1,6 @@
+# Cargador del CV maestro desde un archivo JSON.
+# Sirve para leer la base de datos del CV en formato estructurado.
+
 import json
 
 

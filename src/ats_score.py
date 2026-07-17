@@ -1,3 +1,7 @@
+# Calculador de puntuación ATS.
+# Compara las skills de la oferta con las skills presentes en las experiencias
+# seleccionadas y devuelve un porcentaje de compatibilidad.
+
 from src.skill_ranker import SkillRanker
 from src.aliases import Aliases
 
@@ -10,6 +14,8 @@ class ATSScore:
         self.aliases = Aliases()
 
     def calcular(self, skills_oferta, experiencias):
+        # Recolecta las skills presentes en las experiencias seleccionadas y las
+        # compara con las skills de la oferta para obtener una puntuación ATS.
 
         peso_total = 0
         peso_encontrado = 0

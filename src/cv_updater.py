@@ -1,3 +1,7 @@
+# Actualizador del CV.
+# Permite reemplazar o actualizar secciones del CV con contenido nuevo,
+# por ejemplo al recibir datos desde una respuesta externa.
+
 class CVUpdater:
 
     def actualizar(self, cv, respuesta):
