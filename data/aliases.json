@@ -1,0 +1,63 @@
+{
+    "linux": [
+        "linux",
+        "ubuntu",
+        "red hat",
+        "debian",
+        "rocky linux",
+        "oracle linux",
+        "almalinux"
+    ],
+
+    "windows": [
+        "windows",
+        "windows server"
+    ],
+
+    "azure": [
+        "azure",
+        "microsoft azure",
+        "azure sql"
+    ],
+
+    "python": [
+        "python"
+    ],
+
+    "bash": [
+        "bash"
+    ],
+
+    "ansible": [
+        "ansible"
+    ],
+
+    "grafana": [
+        "grafana"
+    ],
+
+    "zabbix": [
+        "zabbix"
+    ],
+
+    "nagios": [
+        "nagios"
+    ],
+
+    "sql": [
+        "sql server",
+        "postgresql",
+        "sqlite"
+    ],
+
+    "firewall": [
+        "firewall",
+        "sophos firewall"
+    ],
+
+    "virtualizacion": [
+        "vmware",
+        "hyper-v",
+        "virtualbox"
+    ]
+}

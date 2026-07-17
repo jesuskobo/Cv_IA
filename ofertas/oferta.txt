@@ -1,0 +1,14 @@
+Analista de Infraestructura y Ciberseguridad
+¿Te apasiona la tecnología, la seguridad informática y la solución de desafíos tecnológicos? Buscamos un Analista de Infraestructura y Ciberseguridad que garantice la disponibilidad, estabilidad y protección de nuestra operación tecnológica.
+¿Qué harás?
+Administrar servidores, redes y servicios tecnológicos.
+Monitorear la infraestructura y atender incidentes.
+Gestionar accesos y controles de seguridad.
+Identificar y mitigar vulnerabilidades y riesgos cibernéticos.
+Administrar respaldos y recuperación de información.
+Implementar mejoras que fortalezcan la seguridad y continuidad del negocio.
+¿Qué buscamos?
+Profesional en Ingeniería de Sistemas, Telecomunicaciones o carreras afines.
+Experiencia mínima de 2 años en infraestructura tecnológica y/o ciberseguridad.
+Conocimientos en redes, servidores Windows/Linux, virtualización y nube (Azure, AWS o similares).
+Manejo de herramientas de seguridad informática y monitoreo.

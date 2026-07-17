@@ -1,4 +1,6 @@
+ollama
 python-docx
 markdown
 rapidfuzz
 rich
+docxtpl

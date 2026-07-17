@@ -1,0 +1,468 @@
+{
+  "perfil": {
+    "nombre": "Jesús David Rivera Rodríguez",
+    "titulo": "Ingeniero de Infraestructura Linux",
+    "subtitulo": "Automatización | Observabilidad | Windows Server | Microsoft Azure",
+    "ciudad": "Barranquilla, Colombia",
+    "telefono": "3225095716",
+    "correo": "jesusr14r@gmail.com",
+    "linkedin": "https://linkedin.com/in/jesus-rivera-6178a41a8"
+  },
+  "resumen": "Ingeniero de Sistemas con más de cinco años de experiencia administrando infraestructura tecnológica para organizaciones con operación nacional. Experiencia en Linux, Windows Server, automatización con Bash, Python y Ansible, observabilidad con Zabbix, Grafana y Nagios, bases de datos SQL Server y PostgreSQL, y Microsoft Azure. He participado en proyectos de migración, hardening, automatización e integración de plataformas críticas. Actualmente fortaleciendo conocimientos en Docker, Kubernetes, Terraform y CI/CD.",
+  "competencias": {
+    "infraestructura": [
+      "Linux",
+      "Windows Server",
+      "Red Hat",
+      "Ubuntu",
+      "Debian",
+      "Rocky Linux",
+      "Oracle Linux",
+      "AlmaLinux",
+      "LVM",
+      "SSH",
+      "Systemd"
+    ],
+    "automatizacion": [
+      "Python",
+      "Bash",
+      "Ansible",
+      "Git"
+    ],
+    "observabilidad": [
+      "Zabbix",
+      "Grafana",
+      "Nagios"
+    ],
+    "cloud": [
+      "Microsoft Azure",
+      "Azure SQL",
+      "Intune"
+    ],
+    "bases_datos": [
+      "SQL Server",
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "redes": [
+      "TCP/IP",
+      "DNS",
+      "DHCP",
+      "VPN",
+      "VLAN",
+      "Routing",
+      "Sophos Firewall"
+    ],
+    "virtualizacion": [
+      "VMware",
+      "Hyper-V",
+      "VirtualBox"
+    ],
+    "desarrollo": [
+      "Django",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  "experiencia": [
+    {
+      "empresa": "XOLIT",
+      "cargo": "Ingeniero de Infraestructura Linux y Automatización",
+      "sector": "Servicios TI",
+      "prioridad": 10,
+      "inicio": "2026",
+      "fin": "2026",
+      "descripcion": "Administración y automatización de infraestructura Linux en ambientes de producción.",
+      "skills": [
+        "Linux",
+        "LVM",
+        "Bash",
+        "Ansible",
+        "Grafana",
+        "Zabbix",
+        "Hardening",
+        "VoIP",
+        "SFTP",
+        "Cloud"
+      ],
+      "responsabilidades": [
+        {
+          "descripcion": "Administré servidores Linux en ambientes de producción.",
+          "skills": [
+            "Linux"
+          ]
+        },
+        {
+          "descripcion": "Realicé expansión de discos y administración LVM.",
+          "skills": [
+            "Linux",
+            "LVM"
+          ]
+        },
+        {
+          "descripcion": "Implementé hardening de servidores Linux.",
+          "skills": [
+            "Linux",
+            "Hardening"
+          ]
+        },
+        {
+          "descripcion": "Automaticé tareas mediante Bash y Ansible.",
+          "skills": [
+            "Bash",
+            "Ansible"
+          ]
+        },
+        {
+          "descripcion": "Administré plataformas VoIP e IVR.",
+          "skills": [
+            "VoIP"
+          ]
+        },
+        {
+          "descripcion": "Implementé dashboards Grafana utilizando la API de Zabbix.",
+          "skills": [
+            "Grafana",
+            "Zabbix"
+          ]
+        },
+        {
+          "descripcion": "Participé en migraciones SFTP y plataformas Cloud.",
+          "skills": [
+            "SFTP",
+            "Cloud"
+          ]
+        },
+        {
+          "descripcion": "Realicé análisis de capacidad (Sizing).",
+          "skills": [
+            "Sizing"
+          ]
+        }
+      ],
+      "logros": [
+        {
+          "descripcion": "Participé en proyectos de hardening.",
+          "skills": [
+            "Linux",
+            "Hardening"
+          ]
+        },
+        {
+          "descripcion": "Implementé automatizaciones mediante Bash y Ansible.",
+          "skills": [
+            "Bash",
+            "Ansible"
+          ]
+        },
+        {
+          "descripcion": "Mejoré la observabilidad mediante dashboards centralizados.",
+          "skills": [
+            "Grafana",
+            "Zabbix"
+          ]
+        },
+        {
+          "descripcion": "Participé en migraciones de servicios críticos.",
+          "skills": [
+            "SFTP",
+            "Cloud"
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "KFC Colombia",
+      "cargo": "Ingeniero de Infraestructura",
+      "sector": "Retail",
+      "prioridad": 9,
+      "inicio": "2020",
+      "fin": "2026",
+      "descripcion": "Administración de infraestructura tecnológica para más de 300 sedes a nivel nacional.",
+      "skills": [
+        "Linux",
+        "Windows Server",
+        "Azure",
+        "Azure SQL",
+        "Python",
+        "Bash",
+        "SQL Server",
+        "PostgreSQL",
+        "Grafana",
+        "Zabbix",
+        "Nagios",
+        "VPN",
+        "VLAN",
+        "Sophos Firewall",
+        "Intune"
+      ],
+      "responsabilidades": [
+        {
+          "descripcion": "Administré servidores Linux y Windows Server.",
+          "skills": [
+            "Linux",
+            "Windows Server"
+          ]
+        },
+        {
+          "descripcion": "Implementé monitoreo mediante Zabbix, Grafana y Nagios.",
+          "skills": [
+            "Zabbix",
+            "Grafana",
+            "Nagios"
+          ]
+        },
+        {
+          "descripcion": "Administré bases de datos SQL Server y PostgreSQL.",
+          "skills": [
+            "SQL Server",
+            "PostgreSQL"
+          ]
+        },
+        {
+          "descripcion": "Automaticé tareas mediante Python y Bash.",
+          "skills": [
+            "Python",
+            "Bash"
+          ]
+        },
+        {
+          "descripcion": "Administré infraestructura Microsoft Azure.",
+          "skills": [
+            "Azure"
+          ]
+        },
+        {
+          "descripcion": "Gestioné VPN, VLAN y Firewalls Sophos.",
+          "skills": [
+            "VPN",
+            "VLAN",
+            "Firewall"
+          ]
+        }
+      ],
+      "logros": [
+        {
+          "descripcion": "Administré infraestructura para más de 300 sedes.",
+          "skills": [
+            "Linux",
+            "Windows Server"
+          ]
+        },
+        {
+          "descripcion": "Automaticé tareas reduciendo trabajo manual.",
+          "skills": [
+            "Python",
+            "Bash"
+          ]
+        },
+        {
+          "descripcion": "Fortalecí la observabilidad mediante dashboards centralizados.",
+          "skills": [
+            "Grafana",
+            "Zabbix",
+            "Nagios"
+          ]
+        },
+        {
+          "descripcion": "Participé en proyectos de mejora continua.",
+          "skills": [
+            "Infraestructura"
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "ARUS",
+      "cargo": "Analista de Sistemas",
+      "sector": "Servicios TI",
+      "prioridad": 7,
+      "inicio": "2019",
+      "fin": "2020",
+      "descripcion": "Administración de infraestructura tecnológica y redes corporativas.",
+      "skills": [
+        "Linux",
+        "Windows Server",
+        "VPN",
+        "LAN",
+        "WAN",
+        "Avaya"
+      ],
+      "responsabilidades": [
+        {
+          "descripcion": "Administré infraestructura LAN/WAN.",
+          "skills": [
+            "LAN",
+            "WAN"
+          ]
+        },
+        {
+          "descripcion": "Implementé conexiones VPN.",
+          "skills": [
+            "VPN"
+          ]
+        },
+        {
+          "descripcion": "Administré servidores Windows Server y Linux.",
+          "skills": [
+            "Windows Server",
+            "Linux"
+          ]
+        },
+        {
+          "descripcion": "Participé en proyectos de migración tecnológica.",
+          "skills": [
+            "Migración"
+          ]
+        },
+        {
+          "descripcion": "Configuré plataformas de telefonía IP Avaya.",
+          "skills": [
+            "Avaya"
+          ]
+        },
+        {
+          "descripcion": "Documenté procedimientos e infraestructura tecnológica.",
+          "skills": [
+            "Documentación"
+          ]
+        }
+      ],
+      "logros": [
+        {
+          "descripcion": "Participé en proyectos de modernización tecnológica.",
+          "skills": [
+            "Windows Server",
+            "Linux"
+          ]
+        },
+        {
+          "descripcion": "Implementé soluciones VPN.",
+          "skills": [
+            "VPN"
+          ]
+        },
+        {
+          "descripcion": "Apoyé procesos de estandarización de infraestructura.",
+          "skills": [
+            "Infraestructura"
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "COS",
+      "cargo": "Analista de Infraestructura",
+      "sector": "Infraestructura TI",
+      "prioridad": 6,
+      "inicio": "2018",
+      "fin": "2019",
+      "descripcion": "Implementación de infraestructura tecnológica para nuevos clientes.",
+      "skills": [
+        "Linux",
+        "Windows Server",
+        "VLAN",
+        "Firewall",
+        "DMZ",
+        "Cableado Estructurado",
+        "CCTV"
+      ],
+      "responsabilidades": [
+        {
+          "descripcion": "Implementé infraestructura de red para nuevos clientes.",
+          "skills": [
+            "Infraestructura"
+          ]
+        },
+        {
+          "descripcion": "Configuré servidores Windows Server y Linux.",
+          "skills": [
+            "Windows Server",
+            "Linux"
+          ]
+        },
+        {
+          "descripcion": "Implementé VLAN y DMZ.",
+          "skills": [
+            "VLAN",
+            "DMZ"
+          ]
+        },
+        {
+          "descripcion": "Configuré firewalls perimetrales.",
+          "skills": [
+            "Firewall"
+          ]
+        },
+        {
+          "descripcion": "Implementé soluciones de videovigilancia.",
+          "skills": [
+            "CCTV"
+          ]
+        },
+        {
+          "descripcion": "Realicé instalación de cableado estructurado y racks.",
+          "skills": [
+            "Cableado Estructurado"
+          ]
+        }
+      ],
+      "logros": [
+        {
+          "descripcion": "Participé en implementaciones de infraestructura.",
+          "skills": [
+            "Infraestructura"
+          ]
+        },
+        {
+          "descripcion": "Fortalecí la seguridad perimetral.",
+          "skills": [
+            "Firewall"
+          ]
+        },
+        {
+          "descripcion": "Apoyé el despliegue de infraestructura física.",
+          "skills": [
+            "Cableado Estructurado",
+            "Windows Server",
+            "Linux"
+          ]
+        }
+      ]
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Ingeniería de Sistemas",
+      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)"
+    },
+    {
+      "titulo": "Tecnólogo en Mantenimiento de Equipos y Redes",
+      "institucion": "Servicio Nacional de Aprendizaje (SENA)"
+    },
+    {
+      "titulo": "Diplomado en Excel y Power BI",
+      "institucion": "Corporación Unificada Nacional de Educación Superior (CUN)"
+    }
+  ],
+  "certificaciones": [
+    {
+      "nombre": "Microsoft Azure Fundamentals",
+      "codigo": "AZ-900"
+    },
+    {
+      "nombre": "IBM Cybersecurity Fundamentals"
+    }
+  ],
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "B1"
+    }
+  ]
+}

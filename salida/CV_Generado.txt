@@ -1,0 +1,59 @@
+Jesús David Rivera Rodríguez
+Ingeniero de Infraestructura Linux
+
+EXPERIENCIA
+========================================
+
+Ingeniero de Infraestructura
+KFC Colombia
+2020 - 2026
+
+Tecnologías relevantes:
+ - Linux
+ - Windows Server
+ - Azure
+ - Azure SQL
+
+Logros:
+ • Me encargué de administrar la infraestructura en más de 300 sedes.
+
+--------------------------------------------------
+
+Analista de Sistemas
+ARUS
+2019 - 2020
+
+Tecnologías relevantes:
+ - Linux
+ - Windows Server
+
+Logros:
+ • Me especialicé en proyectos de modernización tecnológica.
+
+--------------------------------------------------
+
+Analista de Infraestructura
+COS
+2018 - 2019
+
+Tecnologías relevantes:
+ - Linux
+ - Windows Server
+
+Logros:
+ • Desarrollé y apoyé el despliegue de infraestructura física.
+
+--------------------------------------------------
+
+Ingeniero de Infraestructura Linux y Automatización
+XOLIT
+2026 - 2026
+
+Tecnologías relevantes:
+ - Linux
+
+Logros:
+ • Me especialicé en seguridad informática.
+
+--------------------------------------------------
+
