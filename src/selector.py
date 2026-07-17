@@ -28,6 +28,8 @@ class Selector:
 
         experiencias = []
 
+        habilidades_senior = {"python", "bash", "ansible", "observabilidad", "zabbix", "grafana", "prometheus", "monitoring", "automation"}
+
         for trabajo in self.db["experiencia"]:
 
             score = 0
@@ -57,6 +59,18 @@ class Selector:
                     if self.aliases.coincide(skill, keywords):
 
                         score += 1
+                        skills_relevantes.add(skill)
+
+            for responsabilidad in trabajo.get("responsabilidades", []):
+                for skill in responsabilidad.get("skills", []):
+                    if skill.lower() in habilidades_senior:
+                        score += 3
+                        skills_relevantes.add(skill)
+
+            for logro in trabajo.get("logros", []):
+                for skill in logro.get("skills", []):
+                    if skill.lower() in habilidades_senior:
+                        score += 2
                         skills_relevantes.add(skill)
 
             if score > 0:

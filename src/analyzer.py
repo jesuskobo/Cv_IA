@@ -62,7 +62,6 @@ SKILLS = [
     "vmware",
     "hyper-v",
     "virtualbox",
-    "proxmox",
 
     # Seguridad
     "ciberseguridad",
@@ -72,6 +71,14 @@ SKILLS = [
     "iptables",
     "selinux",
     "hardening",
+    "monitoreo",
+    "vulnerabilidades",
+    "accesos",
+    "recuperación",
+    "backup",
+    "copias de seguridad",
+    "continuidad",
+    "seguridad operativa",
 
     # Infraestructura
     "infraestructura",

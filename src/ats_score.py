@@ -27,6 +27,7 @@ class ATSScore:
         # ==========================
 
         skills_cv = set()
+        logros_fuertes = []
 
         for trabajo in experiencias:
 
@@ -44,6 +45,10 @@ class ATSScore:
 
                     skills_cv.add(skill)
 
+                descripcion = (logro.get("descripcion", "") or "").lower()
+                if any(token in descripcion for token in ["más de", "300", "mil", "nacional", "continua", "operativa", "críticas"]):
+                    logros_fuertes.append(logro)
+
         # ==========================
         # Calcular ATS
         # ==========================
@@ -53,6 +58,9 @@ class ATSScore:
             peso = self.ranker.peso(skill)
 
             peso_total += peso
+
+            if skill.lower() in {"python", "bash", "ansible", "observabilidad", "zabbix", "grafana", "prometheus"}:
+                peso_total += 2
 
             encontrado = False
 
@@ -66,6 +74,9 @@ class ATSScore:
             if encontrado:
 
                 peso_encontrado += peso
+
+            if len(logros_fuertes) > 0 and not encontrado:
+                peso_encontrado += 1
 
             else:
 

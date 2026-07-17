@@ -1,14 +1,14 @@
-Analista de Infraestructura y Ciberseguridad
-¿Te apasiona la tecnología, la seguridad informática y la solución de desafíos tecnológicos? Buscamos un Analista de Infraestructura y Ciberseguridad que garantice la disponibilidad, estabilidad y protección de nuestra operación tecnológica.
-¿Qué harás?
-Administrar servidores, redes y servicios tecnológicos.
-Monitorear la infraestructura y atender incidentes.
-Gestionar accesos y controles de seguridad.
-Identificar y mitigar vulnerabilidades y riesgos cibernéticos.
-Administrar respaldos y recuperación de información.
-Implementar mejoras que fortalezcan la seguridad y continuidad del negocio.
-¿Qué buscamos?
-Profesional en Ingeniería de Sistemas, Telecomunicaciones o carreras afines.
-Experiencia mínima de 2 años en infraestructura tecnológica y/o ciberseguridad.
-Conocimientos en redes, servidores Windows/Linux, virtualización y nube (Azure, AWS o similares).
-Manejo de herramientas de seguridad informática y monitoreo.
+¡Únete a nuestro equipo!
+Buscamos un Ingeniero de Sistemas Junior para brindar soporte técnico, administrar la infraestructura tecnológica y garantizar la continuidad de los servicios TI de la organización. Si tienes experiencia en soporte, redes, servidores y administración de sistemas, esta oportunidad es para ti.
+Funciones principales
+Brindar soporte técnico de primer y segundo nivel a usuarios.
+Administrar y monitorear redes, servidores e infraestructura tecnológica.
+Instalar, configurar y mantener equipos, sistemas operativos y aplicaciones.
+Gestionar incidentes y requerimientos de tecnología.
+Apoyar proyectos de infraestructura, seguridad informática y desarrollo tecnológico.
+Implementar buenas prácticas de seguridad de la información y mejora continua.
+Requisitos
+Profesional en Ingeniería de Sistemas, Informática, Telemática o carreras afines.
+Mínimo 1 año de experiencia en soporte técnico e infraestructura TI.
+Conocimientos en Windows, Linux, redes, Microsoft 365 y servicios en la nube (Azure, AWS o GCP).
+Deseable conocimiento en ITIL y seguridad de la información.

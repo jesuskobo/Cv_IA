@@ -56,6 +56,8 @@ class CVBuilder:
         for trabajo in cv["experiencia"]:
             debug(f"Procesando experiencia: {trabajo.get('empresa', 'Sin empresa')}")
 
+            self._preservar_logros_senior(trabajo)
+
             # ======================================
             # Responsabilidades
             # ======================================
@@ -106,17 +108,24 @@ class CVBuilder:
             # Logros
             # ======================================
 
-            # Filtra los logros para conservar solo los más alineados a la oferta.
-            trabajo["logros"] = (
-                self.responsibility_filter.filtrar(
-                    trabajo["logros"],
-                    skills_oferta
-                )
+            # Filtra los logros para conservar solo los más alineados a la oferta,
+            # pero preserva los logros senior de alto impacto aunque no coincidan
+            # literalmente con la oferta.
+            logros_filtrados = self.responsibility_filter.filtrar(
+                trabajo["logros"],
+                skills_oferta
             )
+
+            logros_senior = [
+                logro for logro in trabajo["logros"]
+                if self._es_logro_senior(logro)
+            ]
+
+            logros_combinados = self._combinar_logros(logros_filtrados, logros_senior)
 
             trabajo["logros"] = (
                 self.ranker.ordenar(
-                    trabajo["logros"],
+                    logros_combinados,
                     skills_oferta
                 )
             )
@@ -130,7 +139,11 @@ class CVBuilder:
                 trabajo["logros"]
             )
 
-            # Mantiene solo los 3 logros más relevantes.
+            # Mantiene solo los 3 logros más relevantes, pero siempre conserva
+            # al menos un logro senior si existe.
+            if logros_senior:
+                trabajo["logros"] = self._priorizar_logros_senior(trabajo["logros"], logros_senior)
+
             trabajo["logros"] = (
                 trabajo["logros"][:3]
             )
@@ -191,6 +204,59 @@ class CVBuilder:
 
         info("Construcción del CV finalizada")
         return cv
+
+    def _preservar_logros_senior(self, trabajo):
+        # Preserva logros cuantitativos y habilidades de alto valor aunque la
+        # oferta sea junior o no los mencione explícitamente.
+
+        logros_senior = []
+        for logro in trabajo.get("logros", []):
+            if self._es_logro_senior(logro):
+                logros_senior.append(logro)
+
+        if logros_senior:
+            trabajo["logros"] = logros_senior + [l for l in trabajo.get("logros", []) if l not in logros_senior]
+
+        habilidades_senior = {"python", "bash", "ansible", "observabilidad", "zabbix", "grafana", "prometheus", "monitoring", "automation"}
+        if not any(skill.lower() in habilidades_senior for skill in trabajo.get("skills_relevantes", [])):
+            for logro in trabajo.get("logros", []):
+                for skill in logro.get("skills", []):
+                    if skill.lower() in habilidades_senior:
+                        trabajo["skills_relevantes"] = sorted(set(trabajo.get("skills_relevantes", []) + [skill]))
+                        break
+
+    def _es_logro_senior(self, logro):
+        descripcion = (logro.get("descripcion", "") or "").lower()
+        tokens = ["más de", "300", "mil", "cientos", "nacional", "continua", "operativa", "críticas", "alta disponibilidad", "escalabilidad"]
+        return any(token in descripcion for token in tokens)
+
+    def _combinar_logros(self, logros_filtrados, logros_senior):
+        combinados = []
+        vistos = set()
+
+        for logro in logros_filtrados + logros_senior:
+            clave = (logro.get("descripcion", ""), tuple(logro.get("skills", [])))
+            if clave in vistos:
+                continue
+            vistos.add(clave)
+            combinados.append(logro)
+
+        return combinados
+
+    def _priorizar_logros_senior(self, logros, logros_senior):
+        if not logros_senior:
+            return logros
+
+        resultado = []
+        for logro in logros_senior:
+            if logro in logros:
+                resultado.append(logro)
+
+        for logro in logros:
+            if logro not in resultado:
+                resultado.append(logro)
+
+        return resultado
 
     def filtrar_competencias(self, competencias, skills_oferta):
         # Mantiene únicamente las competencias que coinciden con las skills
